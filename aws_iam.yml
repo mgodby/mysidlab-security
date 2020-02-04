@@ -23,6 +23,7 @@
       with_items: 
         - "{{ aws_groups }}"
       register: new_groups
+      ignore_errors: True
 
     - name: Create IAM users and group assignments.
       iam:
